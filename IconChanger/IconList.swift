@@ -16,7 +16,7 @@ struct IconList: View {
 
     let rules = [GridItem(.adaptive(minimum: 100), alignment: .top)]
 
-    @State var setPath: LaunchPadManagerDBHelper.AppInfo? = nil
+    @State var selectedApp: LaunchPadManagerDBHelper.AppInfo? = nil
 
     @State var searchText: String = ""
 
@@ -25,30 +25,31 @@ struct IconList: View {
             LazyVGrid(columns: rules) {
                 if !searchText.isEmpty {
                     ForEach(iconManager.findSearchedImage(searchText), id: \.url) { app in
-                        IconView(app: app, setPath: $setPath)
+                        IconView(app: app, selectedApp: $selectedApp)
                     }
                 } else {
                     ForEach(iconManager.apps, id: \.url) { app in
-                        IconView(app: app, setPath: $setPath)
+                        IconView(app: app, selectedApp: $selectedApp)
                     }
                 }
             }
         }
-        .sheet(item: $setPath) {
+        .sheet(item: $selectedApp) {
             ChangeView(setPath: $0)
                 .onDisappear {
-                    setPath = nil
+                    selectedApp = nil
                 }
         }
         .searchable(text: $searchText)
         .toolbar {
             ToolbarItem {
-                Menu {
-                    Button("Install Helper Again") {
-                        try? iconManager.installHelperTool()
-                    }
+                Button {
+                    try? iconManager.installHelperTool()
                 } label: {
-                    Image(systemName: "hammer.fill")
+                    HStack {
+                        Image(systemName: "hammer.fill")
+                        Text("Install Helper Again")
+                    }
                 }
             }
             
@@ -56,7 +57,10 @@ struct IconList: View {
                 Button {
                     iconManager.refresh()
                 } label: {
-                    Image(systemName: "goforward")
+                    HStack {
+                        Image(systemName: "goforward")
+                        Text("Refresh")
+                    }
                 }
             }
         }
@@ -65,12 +69,12 @@ struct IconList: View {
 
 struct IconView: View {
     let app: LaunchPadManagerDBHelper.AppInfo
-    @Binding var setPath: LaunchPadManagerDBHelper.AppInfo?
+    @Binding var selectedApp: LaunchPadManagerDBHelper.AppInfo?
 
     var body: some View {
         VStack {
             Button {
-                setPath = app
+                selectedApp = app
             } label: {
                 Image(nsImage: NSWorkspace.shared.icon(forFile: app.url.universalPath()))
                     .resizable()
