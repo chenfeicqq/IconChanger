@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1DD20F2D43E7AB008C2EE6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E1DD20E2D43E7AB008C2EE6 /* Info.plist */; };
 		2EFFCEB12D43B6A300B37BB9 /* .gitignore in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFCEB02D43B69600B37BB9 /* .gitignore */; };
 		900D1CE9281934C7007ABB12 /* IconChangerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900D1CE8281934C7007ABB12 /* IconChangerApp.swift */; };
 		900D1CEB281934C7007ABB12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900D1CEA281934C7007ABB12 /* ContentView.swift */; };
@@ -14,10 +15,8 @@
 		900D1CF0281934C8007ABB12 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900D1CEF281934C8007ABB12 /* Preview Assets.xcassets */; };
 		900D1CF8281936C7007ABB12 /* FullDiskPermision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900D1CF7281936C7007ABB12 /* FullDiskPermision.swift */; };
 		900D1CFA281938D6007ABB12 /* AppList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900D1CF9281938D6007ABB12 /* AppList.swift */; };
-		9017B5F8294DBBA9005709C6 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 9017B5F7294DBBA9005709C6 /* Sparkle */; };
 		9017B5FA294ED626005709C6 /* IconRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9017B5F9294ED626005709C6 /* IconRes.swift */; };
 		9017B61E295282ED005709C6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9017B61D295282ED005709C6 /* LICENSE */; };
-		9053434F286B2A6800237F98 /* AutoUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9053434E286B2A6800237F98 /* AutoUpdater.swift */; };
 		90534352286C8BDA00237F98 /* fileicon in Resources */ = {isa = PBXBuildFile; fileRef = 90534351286C8BDA00237F98 /* fileicon */; };
 		9053438B287550C200237F98 /* helper.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9053438A287534C300237F98 /* helper.sh */; };
 		907AC4F92954038600F9F0F9 /* README-zh.md in Resources */ = {isa = PBXBuildFile; fileRef = 907AC4F82954038600F9F0F9 /* README-zh.md */; };
@@ -30,13 +29,13 @@
 		908A79092819840D00951B15 /* ChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908A79082819840D00951B15 /* ChangeView.swift */; };
 		908A7927281A5A4A00951B15 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 908A7926281A5A4A00951B15 /* README.md */; };
 		908A792A281A5AE800951B15 /* Github-Iconchanger.png in Resources */ = {isa = PBXBuildFile; fileRef = 908A7929281A5AE800951B15 /* Github-Iconchanger.png */; };
-		908A792E281A771800951B15 /* Api.png in Resources */ = {isa = PBXBuildFile; fileRef = 908A792D281A771800951B15 /* Api.png */; };
 		90B57C1B286AA2B400EE52D3 /* URL+Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B57C1A286AA2B400EE52D3 /* URL+Document.swift */; };
 		90B57C1D286AA2F800EE52D3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B57C1C286AA2F800EE52D3 /* Config.swift */; };
 		90B57C20286AB90700EE52D3 /* installHelper.sh in Resources */ = {isa = PBXBuildFile; fileRef = 90B57C1F286AB90700EE52D3 /* installHelper.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E1DD20E2D43E7AB008C2EE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EFFCEB02D43B69600B37BB9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2EFFCEB22D43BF3900B37BB9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		900D1CE5281934C7007ABB12 /* IconChanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IconChanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,9 +48,6 @@
 		9017B5F9294ED626005709C6 /* IconRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconRes.swift; sourceTree = "<group>"; };
 		9017B6192951F090005709C6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9017B61D295282ED005709C6 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		9053434D286B2A2900237F98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		9053434E286B2A6800237F98 /* AutoUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoUpdater.swift; sourceTree = "<group>"; };
-		90534350286B441900237F98 /* sparkle.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = sparkle.xml; sourceTree = "<group>"; };
 		90534351286C8BDA00237F98 /* fileicon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fileicon; sourceTree = "<group>"; };
 		9053438A287534C300237F98 /* helper.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = helper.sh; sourceTree = "<group>"; };
 		907AC4F82954038600F9F0F9 /* README-zh.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "README-zh.md"; sourceTree = "<group>"; };
@@ -62,7 +58,6 @@
 		908A79082819840D00951B15 /* ChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeView.swift; sourceTree = "<group>"; };
 		908A7926281A5A4A00951B15 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		908A7929281A5AE800951B15 /* Github-Iconchanger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Github-Iconchanger.png"; sourceTree = "<group>"; };
-		908A792D281A771800951B15 /* Api.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Api.png; sourceTree = "<group>"; };
 		90B57C1A286AA2B400EE52D3 /* URL+Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Document.swift"; sourceTree = "<group>"; };
 		90B57C1C286AA2F800EE52D3 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		90B57C1E286AA62300EE52D3 /* IconChanger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IconChanger.entitlements; sourceTree = "<group>"; };
@@ -74,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9017B5F8294DBBA9005709C6 /* Sparkle in Frameworks */,
 				9083CCE92867FDBD0093A1B2 /* SwiftyJSON in Frameworks */,
 				9083CCEC2867FDDD0093A1B2 /* LaunchPadManagerDBHelper in Frameworks */,
 			);
@@ -108,27 +102,25 @@
 		900D1CE7281934C7007ABB12 /* IconChanger */ = {
 			isa = PBXGroup;
 			children = (
-				9053434E286B2A6800237F98 /* AutoUpdater.swift */,
-				9053434D286B2A2900237F98 /* Info.plist */,
-				90B57C1E286AA62300EE52D3 /* IconChanger.entitlements */,
-				908A79012819753E00951B15 /* String+RangeSubscript.swift */,
-				900D1CE8281934C7007ABB12 /* IconChangerApp.swift */,
-				900D1CEA281934C7007ABB12 /* ContentView.swift */,
-				900D1CEC281934C8007ABB12 /* Assets.xcassets */,
-				900D1CEE281934C8007ABB12 /* Preview Content */,
-				900D1CF7281936C7007ABB12 /* FullDiskPermision.swift */,
 				900D1CF9281938D6007ABB12 /* AppList.swift */,
-				908A78FA2819640800951B15 /* IconManager.swift */,
+				900D1CEC281934C8007ABB12 /* Assets.xcassets */,
 				908A79082819840D00951B15 /* ChangeView.swift */,
-				9083CCED28680BE20093A1B2 /* URL+Universal.swift */,
-				90B57C1A286AA2B400EE52D3 /* URL+Document.swift */,
 				90B57C1C286AA2F800EE52D3 /* Config.swift */,
+				900D1CEA281934C7007ABB12 /* ContentView.swift */,
 				90534351286C8BDA00237F98 /* fileicon */,
-				90B57C1F286AB90700EE52D3 /* installHelper.sh */,
-				90534350286B441900237F98 /* sparkle.xml */,
+				900D1CF7281936C7007ABB12 /* FullDiskPermision.swift */,
 				9053438A287534C300237F98 /* helper.sh */,
+				90B57C1E286AA62300EE52D3 /* IconChanger.entitlements */,
+				900D1CE8281934C7007ABB12 /* IconChangerApp.swift */,
+				908A78FA2819640800951B15 /* IconManager.swift */,
 				9017B5F9294ED626005709C6 /* IconRes.swift */,
+				2E1DD20E2D43E7AB008C2EE6 /* Info.plist */,
+				90B57C1F286AB90700EE52D3 /* installHelper.sh */,
 				907AC4FE2955357B00F9F0F9 /* Localizable.strings */,
+				900D1CEE281934C8007ABB12 /* Preview Content */,
+				908A79012819753E00951B15 /* String+RangeSubscript.swift */,
+				90B57C1A286AA2B400EE52D3 /* URL+Document.swift */,
+				9083CCED28680BE20093A1B2 /* URL+Universal.swift */,
 			);
 			path = IconChanger;
 			sourceTree = "<group>";
@@ -152,7 +144,6 @@
 		908A7928281A5AE200951B15 /* Github */ = {
 			isa = PBXGroup;
 			children = (
-				908A792D281A771800951B15 /* Api.png */,
 				908A7929281A5AE800951B15 /* Github-Iconchanger.png */,
 			);
 			path = Github;
@@ -177,7 +168,6 @@
 			packageProductDependencies = (
 				9083CCE82867FDBD0093A1B2 /* SwiftyJSON */,
 				9083CCEB2867FDDD0093A1B2 /* LaunchPadManagerDBHelper */,
-				9017B5F7294DBBA9005709C6 /* Sparkle */,
 			);
 			productName = IconChanger;
 			productReference = 900D1CE5281934C7007ABB12 /* IconChanger.app */;
@@ -211,7 +201,6 @@
 			packageReferences = (
 				9083CCE72867FDBD0093A1B2 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				9083CCEA2867FDDD0093A1B2 /* XCRemoteSwiftPackageReference "LaunchPadManagerDBHelper" */,
-				9017B5F6294DBBA9005709C6 /* XCRemoteSwiftPackageReference "Sparkle" */,
 			);
 			productRefGroup = 900D1CE6281934C7007ABB12 /* Products */;
 			projectDirPath = "";
@@ -235,8 +224,8 @@
 				90B57C20286AB90700EE52D3 /* installHelper.sh in Resources */,
 				900D1CF0281934C8007ABB12 /* Preview Assets.xcassets in Resources */,
 				908A7927281A5A4A00951B15 /* README.md in Resources */,
+				2E1DD20F2D43E7AB008C2EE6 /* Info.plist in Resources */,
 				9017B61E295282ED005709C6 /* LICENSE in Resources */,
-				908A792E281A771800951B15 /* Api.png in Resources */,
 				900D1CED281934C8007ABB12 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +246,6 @@
 				908A78FB2819640800951B15 /* IconManager.swift in Sources */,
 				900D1CE9281934C7007ABB12 /* IconChangerApp.swift in Sources */,
 				900D1CFA281938D6007ABB12 /* AppList.swift in Sources */,
-				9053434F286B2A6800237F98 /* AutoUpdater.swift in Sources */,
 				908A79022819753E00951B15 /* String+RangeSubscript.swift in Sources */,
 				900D1CF8281936C7007ABB12 /* FullDiskPermision.swift in Sources */,
 				908A79092819840D00951B15 /* ChangeView.swift in Sources */,
@@ -484,14 +472,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9017B5F6294DBBA9005709C6 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sparkle-project/Sparkle";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 2.3.0;
-			};
-		};
 		9083CCE72867FDBD0093A1B2 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
@@ -511,11 +491,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9017B5F7294DBBA9005709C6 /* Sparkle */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9017B5F6294DBBA9005709C6 /* XCRemoteSwiftPackageReference "Sparkle" */;
-			productName = Sparkle;
-		};
 		9083CCE82867FDBD0093A1B2 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9083CCE72867FDBD0093A1B2 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
