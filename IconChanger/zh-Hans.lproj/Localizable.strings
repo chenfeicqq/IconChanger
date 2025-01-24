@@ -6,7 +6,7 @@
   
 */
 
-"Unknown" = "Unknown";
+"Unknown" = "未知";
 "We Need Full Disk Access" = "需要“完全磁盘访问权限”";
 "1. Open the System Setting App" = "1. 打开“系统设置”应用";
 "2. Go to the security" = "2. 隐私与安全性";
@@ -22,5 +22,4 @@
 "Choose from the Local" = "Choose from the Local";
 "Api" = "Api";
 "Query Host: " = "Query Host: ";
-"Finish" = "Finish";
 "Install Helper Again" = "重新安装助手";

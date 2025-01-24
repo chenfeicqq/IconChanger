@@ -8,6 +8,9 @@
 import SwiftUI
 import LaunchPadManagerDBHelper
 
+/**
+ * 应用列表
+ */
 struct IconList: View {
     @StateObject var iconManager = IconManager.shared
 
@@ -16,24 +19,20 @@ struct IconList: View {
     @State var setPath: LaunchPadManagerDBHelper.AppInfo? = nil
 
     @State var searchText: String = ""
-    @State var setAlias: String?
 
     var body: some View {
         ScrollView(showsIndicators: false) {
             LazyVGrid(columns: rules) {
                 if !searchText.isEmpty {
                     ForEach(iconManager.findSearchedImage(searchText), id: \.url) { app in
-                        IconView(app: app, setPath: $setPath, searchText: $searchText, setAlias: $setAlias)
+                        IconView(app: app, setPath: $setPath)
                     }
                 } else {
                     ForEach(iconManager.apps, id: \.url) { app in
-                        IconView(app: app, setPath: $setPath, searchText: $searchText, setAlias: $setAlias)
+                        IconView(app: app, setPath: $setPath)
                     }
                 }
             }
-        }
-        .sheet(item: $setAlias) {
-            SetAliasNameView(raw: $0, lastText: AliasName.getNames(for: $0) ?? "")
         }
         .sheet(item: $setPath) {
             ChangeView(setPath: $0)
@@ -68,9 +67,6 @@ struct IconView: View {
     let app: LaunchPadManagerDBHelper.AppInfo
     @Binding var setPath: LaunchPadManagerDBHelper.AppInfo?
 
-    @Binding var searchText: String
-    @Binding var setAlias: String?
-
     var body: some View {
         VStack {
             Button {
@@ -86,7 +82,9 @@ struct IconView: View {
             Text(app.name)
                 .multilineTextAlignment(.center)
         }
+        // 支持拖拽图标至应用进行图标替换
         .onDrop(of: [.fileURL], delegate: MyDropDelegate(app: app))
+        // 右键菜单
         .contextMenu {
             Button("Show in the Finder") {
                 NSWorkspace.shared.activateFileViewerSelecting([app.url])
@@ -113,12 +111,17 @@ struct MyDropDelegate: DropDelegate {
         if let item = info.itemProviders(for: ["public.file-url"]).first {
             item.loadItem(forTypeIdentifier: "public.file-url", options: nil) { (urlData, error) in
                 Task {
+                    if let error = error {
+                        print("Failed to load dropped item: \(error.localizedDescription)")
+                        return
+                    }
+
                     if let urlData = urlData as? Data {
                         let url = NSURL(absoluteURLWithDataRepresentation: urlData, relativeTo: nil) as URL
 
                         if let nsimage = NSImage(contentsOf: url) {
                             do {
-                                try IconManager.shared.setImage(nsimage, app: app)
+                                try await IconManager.shared.setImage(nsimage, app: app)
                             } catch {
                                 fatalError(error.localizedDescription)
                             }
