@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EFFCEB12D43B6A300B37BB9 /* .gitignore in Sources */ = {isa = PBXBuildFile; fileRef = 2EFFCEB02D43B69600B37BB9 /* .gitignore */; };
 		900D1CE9281934C7007ABB12 /* IconChangerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900D1CE8281934C7007ABB12 /* IconChangerApp.swift */; };
 		900D1CEB281934C7007ABB12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900D1CEA281934C7007ABB12 /* ContentView.swift */; };
 		900D1CED281934C8007ABB12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900D1CEC281934C8007ABB12 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EFFCEB02D43B69600B37BB9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		900D1CE5281934C7007ABB12 /* IconChanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IconChanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		900D1CE8281934C7007ABB12 /* IconChangerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconChangerApp.swift; sourceTree = "<group>"; };
 		900D1CEA281934C7007ABB12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		900D1CDC281934C7007ABB12 = {
 			isa = PBXGroup;
 			children = (
+				2EFFCEB02D43B69600B37BB9 /* .gitignore */,
 				9017B61D295282ED005709C6 /* LICENSE */,
 				908A7928281A5AE200951B15 /* Github */,
 				908A7926281A5A4A00951B15 /* README.md */,
@@ -276,6 +279,7 @@
 				908A792C281A759A00951B15 /* SettingView.swift in Sources */,
 				908A790B281A128700951B15 /* Request.swift in Sources */,
 				9017B5FA294ED626005709C6 /* IconRes.swift in Sources */,
+				2EFFCEB12D43B6A300B37BB9 /* .gitignore in Sources */,
 				908A78FB2819640800951B15 /* IconManager.swift in Sources */,
 				9017B5FC294EDAB4005709C6 /* LocalImageView.swift in Sources */,
 				90B57B8028695BDF00EE52D3 /* AliasName.swift in Sources */,
