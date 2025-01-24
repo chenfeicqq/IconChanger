@@ -2,15 +2,15 @@
   Localizable.strings
   IconChanger
 
-  Created by 朱浩宇 on 2022/12/23.
+  Created by chenfeicqq on 2025/01/24.
   
 */
 
 "Unknown" = "Unknown";
-"We Need Full Disk Access" = "We Need Full Disk Access";
-"1. Open the System Setting App" = "1. Open the System Setting App";
-"2. Go to the security" = "2. Go to the security";
-"3. Choose the Full Disk Access" = "3. Choose the Full Disk Access";
+"We Need Full Disk Access" = "需要“完全磁盘访问权限”";
+"1. Open the System Setting App" = "1. 打开“系统设置”应用";
+"2. Go to the security" = "2. 隐私与安全性";
+"3. Choose the Full Disk Access" = "3. 完全磁盘访问权限";
 "4. Unlock it" = "4. Unlock it";
 "5. Choose or add the IconChanger" = "5. Choose or add the IconChanger";
 "6. Check the check box" = "6. Check the check box";
@@ -18,8 +18,8 @@
 "Copy the Name" = "Copy the Name";
 "Path" = "Path";
 "Copy" = "Copy";
-"Copy the Path Name" = 	"Copy the Path Name";
-"Show in the Finder" = "Show in the Finder";
+"Copy the Path Name" = "Copy the Path Name";
+"Show in the Finder" = "在“访达”中显示";
 "Set the Alias" = "Set the Alias";
 "Remove the Icon from the Launchpad" = "Remove the Icon from the Launchpad";
 "macOSIcon" = "macOSIcon"; // This is the name of the website. Maybe you can keep it.
@@ -29,4 +29,4 @@
 "Api" = "Api";
 "Query Host: " = "Query Host: ";
 "Finish" = "Finish";
-"Install Helper Again" = "Install Helper Again";
+"Install Helper Again" = "重新安装助手";

@@ -23,7 +23,6 @@
 		9053438B287550C200237F98 /* helper.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9053438A287534C300237F98 /* helper.sh */; };
 		907AC4F92954038600F9F0F9 /* README-zh.md in Resources */ = {isa = PBXBuildFile; fileRef = 907AC4F82954038600F9F0F9 /* README-zh.md */; };
 		907AC4FC2955357B00F9F0F9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 907AC4FE2955357B00F9F0F9 /* Localizable.strings */; };
-		907AC5012955363800F9F0F9 /* README-fr.md in Resources */ = {isa = PBXBuildFile; fileRef = 907AC5002955363800F9F0F9 /* README-fr.md */; };
 		9083CCE92867FDBD0093A1B2 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 9083CCE82867FDBD0093A1B2 /* SwiftyJSON */; };
 		9083CCEC2867FDDD0093A1B2 /* LaunchPadManagerDBHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 9083CCEB2867FDDD0093A1B2 /* LaunchPadManagerDBHelper */; };
 		9083CCEE28680BE20093A1B2 /* URL+Universal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9083CCED28680BE20093A1B2 /* URL+Universal.swift */; };
@@ -45,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		2EFFCEB02D43B69600B37BB9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2EFFCEB22D43BF3900B37BB9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		900D1CE5281934C7007ABB12 /* IconChanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IconChanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		900D1CE8281934C7007ABB12 /* IconChangerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconChangerApp.swift; sourceTree = "<group>"; };
 		900D1CEA281934C7007ABB12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,9 +62,7 @@
 		90534351286C8BDA00237F98 /* fileicon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fileicon; sourceTree = "<group>"; };
 		9053438A287534C300237F98 /* helper.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = helper.sh; sourceTree = "<group>"; };
 		907AC4F82954038600F9F0F9 /* README-zh.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "README-zh.md"; sourceTree = "<group>"; };
-		907AC4FD2955357B00F9F0F9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		907AC4FF2955358A00F9F0F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		907AC5002955363800F9F0F9 /* README-fr.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "README-fr.md"; sourceTree = "<group>"; };
 		9083CCED28680BE20093A1B2 /* URL+Universal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Universal.swift"; sourceTree = "<group>"; };
 		908A78FA2819640800951B15 /* IconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconManager.swift; sourceTree = "<group>"; };
 		908A79012819753E00951B15 /* String+RangeSubscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+RangeSubscript.swift"; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 				908A7928281A5AE200951B15 /* Github */,
 				908A7926281A5A4A00951B15 /* README.md */,
 				907AC4F82954038600F9F0F9 /* README-zh.md */,
-				907AC5002955363800F9F0F9 /* README-fr.md */,
 				900D1CE7281934C7007ABB12 /* IconChanger */,
 				900D1CE6281934C7007ABB12 /* Products */,
 				9017B60B2951B22F005709C6 /* Frameworks */,
@@ -221,12 +218,12 @@
 			};
 			buildConfigurationList = 900D1CE0281934C7007ABB12 /* Build configuration list for PBXProject "IconChanger" */;
 			compatibilityVersion = "Xcode 13.0";
-			developmentRegion = en;
+			developmentRegion = "zh-Hans";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
-				fr,
+				"zh-Hans",
 			);
 			mainGroup = 900D1CDC281934C7007ABB12;
 			packageReferences = (
@@ -258,7 +255,6 @@
 				908A7927281A5A4A00951B15 /* README.md in Resources */,
 				9017B61E295282ED005709C6 /* LICENSE in Resources */,
 				908A792E281A771800951B15 /* Api.png in Resources */,
-				907AC5012955363800F9F0F9 /* README-fr.md in Resources */,
 				900D1CED281934C8007ABB12 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,8 +294,8 @@
 		907AC4FE2955357B00F9F0F9 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				907AC4FD2955357B00F9F0F9 /* fr */,
 				907AC4FF2955358A00F9F0F9 /* en */,
+				2EFFCEB22D43BF3900B37BB9 /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
