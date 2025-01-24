@@ -1,10 +1,3 @@
-//
-//  IconList.swift
-//  IconChanger
-//
-//  Created by 朱浩宇 on 2022/4/27.
-//
-
 import SwiftUI
 import LaunchPadManagerDBHelper
 
@@ -14,10 +7,13 @@ import LaunchPadManagerDBHelper
 struct AppList: View {
     @StateObject var iconManager = IconManager.shared
 
+    // 定义网格布局的列配置，使用自适应布局，最小宽度为 100，顶部对齐
     let gridColumns = [GridItem(.adaptive(minimum: 100), alignment: .top)]
 
+    // 用于存储当前选中的应用程序信息
     @State var selectedApp: LaunchPadManagerDBHelper.AppInfo? = nil
 
+    // 用于存储搜索框中的文本
     @State var searchText: String = ""
 
     var body: some View {
@@ -25,27 +21,30 @@ struct AppList: View {
             LazyVGrid(columns: gridColumns) {
                 if !searchText.isEmpty {
                     ForEach(iconManager.searchApps(searchText), id: \.url) { app in
-                        IconView(app: app, selectedApp: $selectedApp)
+                        AppView(app: app, selectedApp: $selectedApp)
                     }
                 } else {
                     ForEach(iconManager.apps, id: \.url) { app in
-                        IconView(app: app, selectedApp: $selectedApp)
+                        AppView(app: app, selectedApp: $selectedApp)
                     }
                 }
             }
         }
+        // 当 selectedApp 不为空时，显示 ChangeView
         .sheet(item: $selectedApp) {
-            ChangeView(setPath: $0)
+            ChangeView(app: $0)
                 .onDisappear {
                     selectedApp = nil
                 }
         }
+        // 添加搜索功能，绑定 searchText 到搜索框
         .searchable(text: $searchText)
         .toolbar {
             ToolbarItem {
                 Button {
                     try? iconManager.installHelperTool()
                 } label: {
+                    // 使用 HStack 组合图标和文字
                     HStack {
                         Image(systemName: "hammer.fill")
                         Text("Install Helper Again")
@@ -67,7 +66,10 @@ struct AppList: View {
     }
 }
 
-struct IconView: View {
+/**
+ * 应用
+ */
+struct AppView: View {
     let app: LaunchPadManagerDBHelper.AppInfo
     @Binding var selectedApp: LaunchPadManagerDBHelper.AppInfo?
 
@@ -98,12 +100,9 @@ struct IconView: View {
     }
 }
 
-extension String: Identifiable {
-    public var id: String {
-        self
-    }
-}
-
+/**
+ * 拖拽替换图标
+ */
 struct MyDropDelegate: DropDelegate {
     let app: LaunchPadManagerDBHelper.AppInfo
 

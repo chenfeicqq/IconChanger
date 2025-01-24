@@ -6,7 +6,8 @@
   
 */
 
-"Unknown" = "未知";
+"Install Helper Again" = "重新安装助手";
+"Refresh" = "刷新应用列表";
 "We Need Full Disk Access" = "需要“完全磁盘访问权限”";
 "1. Open the System Setting App" = "1. 打开“系统设置”应用";
 "2. Go to the security" = "2. 隐私与安全性";
@@ -16,11 +17,7 @@
 "6. Check the check box" = "6. Check the check box";
 "Check the Access Permition" = "Check the Access Permition";
 "Show in the Finder" = "在“访达”中显示";
-"macOSIcon" = "macOSIcon"; // This is the name of the website. Maybe you can keep it.
-"Local" = "Local";
-"Cancel" = "Cancel";
-"Choose from the Local" = "Choose from the Local";
+"Cancel" = "取消";
+"Choose from the Local" = "选取本地图标";
 "Api" = "Api";
 "Query Host: " = "Query Host: ";
-"Install Helper Again" = "重新安装助手";
-"Refresh" = "刷新应用列表";

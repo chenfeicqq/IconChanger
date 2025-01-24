@@ -6,7 +6,8 @@
   
 */
 
-"Unknown" = "Unknown";
+"Install Helper Again" = "Install Helper Again";
+"Refresh" = "Refresh";
 "We Need Full Disk Access" = "We Need Full Disk Access";
 "1. Open the System Setting App" = "1. Open the System Setting App";
 "2. Go to the security" = "2. Go to the security";
@@ -16,11 +17,7 @@
 "6. Check the check box" = "6. Check the check box";
 "Check the Access Permition" = "Check the Access Permition";
 "Show in the Finder" = "Show in the Finder";
-"macOSIcon" = "macOSIcon"; // This is the name of the website. Maybe you can keep it.
-"Local" = "Local";
 "Cancel" = "Cancel";
 "Choose from the Local" = "Choose from the Local";
 "Api" = "Api";
 "Query Host: " = "Query Host: ";
-"Install Helper Again" = "Install Helper Again";
-"Refresh" = "Refresh";

@@ -9,15 +9,15 @@ import SwiftUI
 import LaunchPadManagerDBHelper
 
 struct ChangeView: View {
-    let rules = [GridItem(.flexible(), alignment: .top),
+    let gridColumns = [GridItem(.flexible(), alignment: .top),
                  GridItem(.flexible(), alignment: .top),
                  GridItem(.flexible(), alignment: .top),
                  GridItem(.flexible(), alignment: .top)]
 
-    @State var icons: [IconRes] = []
-    @State var inIcons: [URL] = []
-    @State var showProgress = false
-    let setPath: LaunchPadManagerDBHelper.AppInfo
+    // 应用的图标资源
+    @State var appIcons: [URL] = []
+    // 当前选中的应用程序信息
+    let app: LaunchPadManagerDBHelper.AppInfo
 
     @Environment(\.presentationMode) var presentationMode
 
@@ -26,45 +26,13 @@ struct ChangeView: View {
     @State var importImage = false
 
     var body: some View {
-        TabView {
-            ScrollView(showsIndicators: false) {
-                if icons.isEmpty {
-                    VStack {
-                        ProgressView()
-                    }
-                } else {
-                    ZStack {
-                        LazyVGrid(columns: rules) {
-                            ForEach(icons, id: \.self) { icon in
-                                ImageView(icon: icon, setPath: setPath, showPro: $showProgress)
-                            }
-
-                            Spacer()
-                        }
-                        .disabled(showProgress)
-
-                        if showProgress {
-                            //TODO: Make this better
-                            ProgressView()
-                        }
-                    }
+        ScrollView(showsIndicators: false) {
+            LazyVGrid(columns: gridColumns) {
+                ForEach(appIcons, id: \.self) { icon in
+                    ImageView(url: icon, app: app)
                 }
-            }
-            .tabItem {
-                Text("macOSIcon")
-            }
 
-            ScrollView(showsIndicators: false) {
-                LazyVGrid(columns: rules) {
-                    ForEach(inIcons, id: \.self) { icon in
-                        LocalImageView(url: icon, setPath: setPath)
-                    }
-
-                    Spacer()
-                }
-            }
-            .tabItem {
-                Text("Local")
+                Spacer()
             }
         }
         .fileImporter(isPresented: $importImage, allowedContentTypes: [.image, .icns]) { result in
@@ -73,12 +41,13 @@ struct ChangeView: View {
                 if url.startAccessingSecurityScopedResource() {
                     if let nsimage = NSImage(contentsOf: url) {
                         do {
-                            try IconManager.shared.setImage(nsimage, app: setPath)
+                            try IconManager.shared.setImage(nsimage, app: app)
                         } catch {
                             fatalError(error.localizedDescription)
                         }
                     }
                     url.stopAccessingSecurityScopedResource()
+                    presentationMode.wrappedValue.dismiss()
                 }
             case .failure(let error):
                 print(error)
@@ -100,14 +69,34 @@ struct ChangeView: View {
         }
         .frame(width: 500, height: 400)
         .onAppear {
-            inIcons = iconManager.getIconInPath(setPath.url)
+            appIcons = iconManager.getIconInPath(app.url)
         }
-        .task {
-            do {
-                icons = try await iconManager.getIcons(setPath)
-            } catch {
-                print(error)
+    }
+}
+
+/**
+ * 本地图片
+ */
+struct ImageView: View {
+    let url: URL
+    let app: LaunchPadManagerDBHelper.AppInfo
+
+    @Environment(\.presentationMode) var presentationMode
+
+    var body: some View {
+        
+        let nsimage = NSImage(byReferencing: url)
+        
+        Image(nsImage: nsimage)
+            .resizable()
+            .scaledToFit()
+            .onTapGesture {
+                do {
+                    try IconManager.shared.setImage(nsimage, app: app)
+                    presentationMode.wrappedValue.dismiss()
+                } catch {
+                    print(error)
+                }
             }
-        }
     }
 }

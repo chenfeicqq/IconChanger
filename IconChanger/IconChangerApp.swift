@@ -22,17 +22,13 @@ struct IconChangerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .frame(minWidth: fullDiskPermision.hasPermision ? 750 : 500, minHeight: fullDiskPermision.hasPermision ? 500 : 300)
+                .frame(minWidth: 750, minHeight: 500)
                 .animation(.easeInOut, value: fullDiskPermision.hasPermision)
         }
         .commands {
             CommandGroup(after: .appInfo) {
                 CheckForUpdatesView(updater: updaterController.updater)
             }
-        }
-
-        Settings {
-            SettingView()
         }
     }
 }

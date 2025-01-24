@@ -149,35 +149,6 @@ class IconManager: ObservableObject {
         return String(url[count..<endCount] ?? "")
     }
 
-    func getIcons(_ app: LaunchPadManagerDBHelper.AppInfo) async throws -> [IconRes] {
-        let appName = app.name
-        let urlName = app.url.deletingPathExtension().lastPathComponent
-        let bundleName = try getAppBundleName(app)
-        let aliasName = AliasName.getNames(for: app.url.deletingPathExtension().lastPathComponent)
-
-        var res = [IconRes]()
-
-        res.append(contentsOf: try await MyQueryRequestController().sendRequest(appName))
-        res.append(contentsOf: try await MyQueryRequestController().sendRequest(urlName))
-        
-        if let bundleName {
-            res.append(contentsOf: try await MyQueryRequestController().sendRequest(bundleName))
-        }
-
-        if let aliasName {
-            res.append(contentsOf: try await MyQueryRequestController().sendRequest(aliasName))
-        }
-
-        return Set(res).map { $0 }
-    }
-
-    func getAppBundleName(_ app: LaunchPadManagerDBHelper.AppInfo) throws -> String? {
-        let plistURL = app.url.universalappending(path: "Contents").universalappending(path: "Info.plist")
-        let plist = (try? NSDictionary(contentsOf: plistURL, error: ())) as? Dictionary<String, AnyObject>
-
-        return (plist?["CFBundleDisplayName"] as? String) ?? (plist?["CFBundleName"] as? String)
-    }
-
     func runHelperTool() throws {
         let helperToolURL = URL.documents.universalappending(path: "helper.sh")
         try Self.safeShell("sudo \(helperToolURL.universalPath())")
