@@ -81,7 +81,6 @@
 		90B57C1C286AA2F800EE52D3 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		90B57C1E286AA62300EE52D3 /* IconChanger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IconChanger.entitlements; sourceTree = "<group>"; };
 		90B57C1F286AB90700EE52D3 /* installHelper.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = installHelper.sh; sourceTree = "<group>"; };
-		90B57C21286ACBA700EE52D3 /* StringTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StringTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +145,6 @@
 				90B57C1C286AA2F800EE52D3 /* Config.swift */,
 				90534351286C8BDA00237F98 /* fileicon */,
 				90B57C1F286AB90700EE52D3 /* installHelper.sh */,
-				90B57C21286ACBA700EE52D3 /* StringTest.playground */,
 				90534350286B441900237F98 /* sparkle.xml */,
 				9053438A287534C300237F98 /* helper.sh */,
 				9017B5F9294ED626005709C6 /* IconRes.swift */,
@@ -436,7 +434,7 @@
 				CURRENT_PROJECT_VERSION = 17;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"IconChanger/Preview Content\"";
-				DEVELOPMENT_TEAM = 44BN78992X;
+				DEVELOPMENT_TEAM = FJUMTVH5DL;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -469,7 +467,7 @@
 				CURRENT_PROJECT_VERSION = 17;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"IconChanger/Preview Content\"";
-				DEVELOPMENT_TEAM = 44BN78992X;
+				DEVELOPMENT_TEAM = FJUMTVH5DL;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
