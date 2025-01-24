@@ -15,13 +15,7 @@
 "5. Choose or add the IconChanger" = "5. Choose or add the IconChanger";
 "6. Check the check box" = "6. Check the check box";
 "Check the Access Permition" = "Check the Access Permition";
-"Copy the Name" = "Copy the Name";
-"Path" = "Path";
-"Copy" = "Copy";
-"Copy the Path Name" = "Copy the Path Name";
 "Show in the Finder" = "在“访达”中显示";
-"Set the Alias" = "Set the Alias";
-"Remove the Icon from the Launchpad" = "Remove the Icon from the Launchpad";
 "macOSIcon" = "macOSIcon"; // This is the name of the website. Maybe you can keep it.
 "Local" = "Local";
 "Cancel" = "Cancel";
