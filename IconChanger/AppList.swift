@@ -11,10 +11,10 @@ import LaunchPadManagerDBHelper
 /**
  * 应用列表
  */
-struct IconList: View {
+struct AppList: View {
     @StateObject var iconManager = IconManager.shared
 
-    let rules = [GridItem(.adaptive(minimum: 100), alignment: .top)]
+    let gridColumns = [GridItem(.adaptive(minimum: 100), alignment: .top)]
 
     @State var selectedApp: LaunchPadManagerDBHelper.AppInfo? = nil
 
@@ -22,9 +22,9 @@ struct IconList: View {
 
     var body: some View {
         ScrollView(showsIndicators: false) {
-            LazyVGrid(columns: rules) {
+            LazyVGrid(columns: gridColumns) {
                 if !searchText.isEmpty {
-                    ForEach(iconManager.findSearchedImage(searchText), id: \.url) { app in
+                    ForEach(iconManager.searchApps(searchText), id: \.url) { app in
                         IconView(app: app, selectedApp: $selectedApp)
                     }
                 } else {

@@ -14,7 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         if fullDiskPermision.hasPermision {
-            IconList()
+            AppList()
                 .task {
                     if helperToolVersion < Config.helperToolVersion {
                         if #available(macOS 13.0, *) {

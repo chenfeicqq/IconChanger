@@ -13,7 +13,7 @@
 		900D1CED281934C8007ABB12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900D1CEC281934C8007ABB12 /* Assets.xcassets */; };
 		900D1CF0281934C8007ABB12 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900D1CEF281934C8007ABB12 /* Preview Assets.xcassets */; };
 		900D1CF8281936C7007ABB12 /* FullDiskPermision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900D1CF7281936C7007ABB12 /* FullDiskPermision.swift */; };
-		900D1CFA281938D6007ABB12 /* IconList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900D1CF9281938D6007ABB12 /* IconList.swift */; };
+		900D1CFA281938D6007ABB12 /* AppList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900D1CF9281938D6007ABB12 /* AppList.swift */; };
 		9017B5F8294DBBA9005709C6 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 9017B5F7294DBBA9005709C6 /* Sparkle */; };
 		9017B5FA294ED626005709C6 /* IconRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9017B5F9294ED626005709C6 /* IconRes.swift */; };
 		9017B5FC294EDAB4005709C6 /* LocalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9017B5FB294EDAB4005709C6 /* LocalImageView.swift */; };
@@ -50,7 +50,7 @@
 		900D1CEC281934C8007ABB12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		900D1CEF281934C8007ABB12 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		900D1CF7281936C7007ABB12 /* FullDiskPermision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullDiskPermision.swift; sourceTree = "<group>"; };
-		900D1CF9281938D6007ABB12 /* IconList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconList.swift; sourceTree = "<group>"; };
+		900D1CF9281938D6007ABB12 /* AppList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppList.swift; sourceTree = "<group>"; };
 		9017B5F9294ED626005709C6 /* IconRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconRes.swift; sourceTree = "<group>"; };
 		9017B5FB294EDAB4005709C6 /* LocalImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalImageView.swift; sourceTree = "<group>"; };
 		9017B6192951F090005709C6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -128,7 +128,7 @@
 				900D1CEC281934C8007ABB12 /* Assets.xcassets */,
 				900D1CEE281934C8007ABB12 /* Preview Content */,
 				900D1CF7281936C7007ABB12 /* FullDiskPermision.swift */,
-				900D1CF9281938D6007ABB12 /* IconList.swift */,
+				900D1CF9281938D6007ABB12 /* AppList.swift */,
 				908A78FA2819640800951B15 /* IconManager.swift */,
 				908A79082819840D00951B15 /* ChangeView.swift */,
 				908A790A281A128700951B15 /* Request.swift */,
@@ -275,7 +275,7 @@
 				9017B5FC294EDAB4005709C6 /* LocalImageView.swift in Sources */,
 				90B57B8028695BDF00EE52D3 /* AliasName.swift in Sources */,
 				900D1CE9281934C7007ABB12 /* IconChangerApp.swift in Sources */,
-				900D1CFA281938D6007ABB12 /* IconList.swift in Sources */,
+				900D1CFA281938D6007ABB12 /* AppList.swift in Sources */,
 				9053434F286B2A6800237F98 /* AutoUpdater.swift in Sources */,
 				908A79022819753E00951B15 /* String+RangeSubscript.swift in Sources */,
 				908A790D281A148000951B15 /* ImageView.swift in Sources */,

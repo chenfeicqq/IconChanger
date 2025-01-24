@@ -124,7 +124,7 @@ class IconManager: ObservableObject {
         }
     }
 
-    func findSearchedImage(_ search: String) -> [LaunchPadManagerDBHelper.AppInfo] {
+    func searchApps(_ search: String) -> [LaunchPadManagerDBHelper.AppInfo] {
         apps.filter {
             $0.name.lowercased().contains(search.lowercased()) || $0.url.deletingPathExtension().lastPathComponent.lowercased().contains(search.lowercased())
         }
