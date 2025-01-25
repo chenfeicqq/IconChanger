@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     @StateObject var fullDiskPermision = FullDiskPermision.shared
     @StateObject var iconManager = IconManager.shared
     @AppStorage("helperToolVersion") var helperToolVersion = 0
     
     var body: some View {
         if fullDiskPermision.hasPermision {
-            AppList()
+            AppListView()
                 .task {
                     if helperToolVersion < Config.helperToolVersion {
                         if #available(macOS 13.0, *) {
@@ -32,43 +32,45 @@ struct ContentView: View {
                     }
                 }
         } else {
-            VStack {
-                Text("We Need Full Disk Access")
-                    .font(.largeTitle.bold())
-                    .padding()
+            FullDiskAccessView(fullDiskPermision: fullDiskPermision)
+                .task {
+                    if #available(macOS 13.0, *) {
+                        try? await Task.sleep(for: .seconds(1))
+                    } else {
+                        try? await Task.sleep(nanoseconds: NSEC_PER_SEC)
+                    }
 
-                VStack(alignment: .leading) {
-                    Text("1. Open the System Setting App")
-                    Text("2. Go to the security")
-                    Text("3. Choose the Full Disk Access")
-                    Text("4. Turn on the IconChanger switch")
-                }
-                .multilineTextAlignment(.leading)
-
-                Button("Check the Access Permition") {
                     fullDiskPermision.check()
+                    if !fullDiskPermision.hasPermision {
+                        NSWorkspace.shared.openLocationService(for: .fullDisk)
+                    }
                 }
-                .padding()
-            }
-            .task {
-                if #available(macOS 13.0, *) {
-                    try? await Task.sleep(for: .seconds(1))
-                } else {
-                    try? await Task.sleep(nanoseconds: NSEC_PER_SEC)
-                }
-
-                fullDiskPermision.check()
-                if !fullDiskPermision.hasPermision {
-                    NSWorkspace.shared.openLocationService(for: .fullDisk)
-                }
-            }
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+struct FullDiskAccessView: View {
+    @ObservedObject var fullDiskPermision: FullDiskPermision
+
+    var body: some View {
+        VStack {
+            Text("We Need Full Disk Access")
+                .font(.largeTitle.bold())
+                .padding()
+
+            VStack(alignment: .leading) {
+                Text("1. Open the System Setting App")
+                Text("2. Go to the security")
+                Text("3. Choose the Full Disk Access")
+                Text("4. Turn on the IconChanger switch")
+            }
+            .multilineTextAlignment(.leading)
+
+            Button("Check the Access Permission") {
+                fullDiskPermision.check()
+            }
+            .padding()
+        }
     }
 }
 

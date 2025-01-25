@@ -4,7 +4,7 @@ import LaunchPadManagerDBHelper
 /**
  * 应用列表
  */
-struct AppList: View {
+struct AppListView: View {
     @StateObject var iconManager = IconManager.shared
 
     // 定义网格布局的列配置，使用自适应布局，最小宽度为 100，顶部对齐
@@ -30,9 +30,9 @@ struct AppList: View {
                 }
             }
         }
-        // 当 selectedApp 不为空时，显示 ChangeView
+        // 当 selectedApp 不为空时，显示 AppChangeIconView
         .sheet(item: $selectedApp) {
-            ChangeView(app: $0)
+            AppChangeIconView(app: $0)
                 .onDisappear {
                     selectedApp = nil
                 }
@@ -40,26 +40,34 @@ struct AppList: View {
         // 添加搜索功能，绑定 searchText 到搜索框
         .searchable(text: $searchText)
         .toolbar {
-            ToolbarItem {
-                Button {
-                    try? iconManager.installHelperTool()
-                } label: {
-                    // 使用 HStack 组合图标和文字
-                    HStack {
-                        Image(systemName: "hammer.fill")
-                        Text("Install Helper Again")
-                    }
+            Toolbar(iconManager: iconManager)
+        }
+    }
+}
+
+struct Toolbar: ToolbarContent {
+    var iconManager: IconManager
+
+    var body: some ToolbarContent {
+        ToolbarItem {
+            Button {
+                try? iconManager.installHelperTool()
+            } label: {
+                // 使用 HStack 组合图标和文字
+                HStack {
+                    Image(systemName: "hammer.fill")
+                    Text("Install Helper Again")
                 }
             }
-            
-            ToolbarItem(placement: .automatic) {
-                Button {
-                    iconManager.refresh()
-                } label: {
-                    HStack {
-                        Image(systemName: "goforward")
-                        Text("Refresh")
-                    }
+        }
+        
+        ToolbarItem(placement: .automatic) {
+            Button {
+                iconManager.refresh()
+            } label: {
+                HStack {
+                    Image(systemName: "goforward")
+                    Text("Refresh")
                 }
             }
         }
@@ -89,7 +97,7 @@ struct AppView: View {
                 .multilineTextAlignment(.center)
         }
         // 支持拖拽图标至应用进行图标替换
-        .onDrop(of: [.fileURL], delegate: MyDropDelegate(app: app))
+        .onDrop(of: [.fileURL], delegate: AppIconDropDelegate(app: app))
         // 右键菜单
         .contextMenu {
             Button("Show in the Finder") {
@@ -103,7 +111,7 @@ struct AppView: View {
 /**
  * 拖拽替换图标
  */
-struct MyDropDelegate: DropDelegate {
+struct AppIconDropDelegate: DropDelegate {
     let app: LaunchPadManagerDBHelper.AppInfo
 
     func validateDrop(info: DropInfo) -> Bool {

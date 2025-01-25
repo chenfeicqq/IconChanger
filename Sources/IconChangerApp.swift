@@ -13,7 +13,7 @@ struct IconChangerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
                 .frame(minWidth: 750, minHeight: 500)
                 .animation(.easeInOut, value: fullDiskPermision.hasPermision)
         }

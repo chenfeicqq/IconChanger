@@ -1,30 +1,28 @@
 # IconChanger
 
-[中文版](./README-zh.md)
+[English](./README-en.md)
 
-IconChanger is an app that can change you app's icon. It simplifies your icon changing process.
+IconChanger是一个可以更换App图标的应用程序。它简化了你更换图标的流程。
 <br><br>
-![](./Github/Github-Iconchanger.png)
+![](./images/Iconchanger.png)
 
-## How to use
+## 如何使用
 
-1. Go to github release
-2. Download the latest app
-3. Move the app to the Application folder
-4. Open the IconChanger app
-5. Change the icon
-    + Method 1: Click on the app whose icon you want to change, then "Choose from the Local".
-    + Method 2: Drag and drop an icon onto the app whose icon you want to change.
+1. 前往GitHub的Release界面
+2. 下载最新版App
+3. 将App移动到应用程序文件夹
+4. 打开 IconChager 应用
+5. 更换图标：方法一、点击需要更换图标的应用，选取本地图标；方法二、拖拽图标至需要更换图标的应用上；
 
-## How to get app Icon
+## 如何获取应用 Icon
 
-Go to https://macosicons.com/, search for the app name, and download the icon.
+前往 https://macosicons.com/ 根据应用名进行搜索下载。
 
-## About System App
+## 关于系统App
 
-Very sorry to say, but currently, we cannot change the icon of System Apps. Because of the SIP, users or root cannot write things to this app. And the idea of the Bridge App needs to change the `Info.plist`, so it will not work.
+非常抱歉，目前我们无法更改系统应用程序的图标。由于 SIP，用户或 root 无法向此应用写入内容。而Bridge App的想法需要修改一下 `Info.plist`，所以是行不通的。
 
-## Acknowledgement
+## 承谢
 
 * [underthestars-zhy/IconChanger](https://github.com/underthestars-zhy/IconChanger)
 * [macOSicons](https://macosicons.com/#/)
