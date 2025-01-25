@@ -17,5 +17,16 @@ struct IconChangerApp: App {
                 .frame(minWidth: 750, minHeight: 500)
                 .animation(.easeInOut, value: fullDiskPermision.hasPermision)
         }
+        .commands {
+            // 添加帮助菜单
+            CommandGroup(replacing: .help) {
+                Button("Github page") {
+                    if let url = URL(string: "https://github.com/chenfeicqq/IconChanger") {
+                        NSWorkspace.shared.open(url)
+                    }
+                }
+                .keyboardShortcut("?", modifiers: [.command])
+            }
+        }
     }
 }

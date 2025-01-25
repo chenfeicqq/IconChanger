@@ -24,7 +24,7 @@ IconChanger是一个可以更换App图标的应用程序。它简化了你更换
 
 ## 承谢
 
-* [underthestars-zhy/IconChanger](https://github.com/underthestars-zhy/IconChanger)
+* [underthestars-zhy/IconChanger](https://github.com/underthestars-zhy/IconChanger) Fork 自该项目，对功能做了简化和优化
 * [macOSicons](https://macosicons.com/#/)
 * [fileicon](https://github.com/mklement0/fileicon)
 * [Atom](https://github.com/atomtoto)
