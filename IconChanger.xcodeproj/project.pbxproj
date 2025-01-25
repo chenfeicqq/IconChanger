@@ -24,7 +24,7 @@
 		9083CCEE28680BE20093A1B2 /* URL+Universal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9083CCED28680BE20093A1B2 /* URL+Universal.swift */; };
 		908A78FB2819640800951B15 /* IconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908A78FA2819640800951B15 /* IconManager.swift */; };
 		908A79022819753E00951B15 /* String+RangeSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908A79012819753E00951B15 /* String+RangeSubscript.swift */; };
-		908A79092819840D00951B15 /* AppChangeIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908A79082819840D00951B15 /* AppChangeIconView.swift */; };
+		908A79092819840D00951B15 /* AppIconChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908A79082819840D00951B15 /* AppIconChangeView.swift */; };
 		908A7927281A5A4A00951B15 /* README-en.md in Resources */ = {isa = PBXBuildFile; fileRef = 908A7926281A5A4A00951B15 /* README-en.md */; };
 		908A792A281A5AE800951B15 /* Iconchanger.png in Resources */ = {isa = PBXBuildFile; fileRef = 908A7929281A5AE800951B15 /* Iconchanger.png */; };
 		90B57C1B286AA2B400EE52D3 /* URL+Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B57C1A286AA2B400EE52D3 /* URL+Document.swift */; };
@@ -51,7 +51,7 @@
 		9083CCED28680BE20093A1B2 /* URL+Universal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Universal.swift"; sourceTree = "<group>"; };
 		908A78FA2819640800951B15 /* IconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconManager.swift; sourceTree = "<group>"; };
 		908A79012819753E00951B15 /* String+RangeSubscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+RangeSubscript.swift"; sourceTree = "<group>"; };
-		908A79082819840D00951B15 /* AppChangeIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppChangeIconView.swift; sourceTree = "<group>"; };
+		908A79082819840D00951B15 /* AppIconChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconChangeView.swift; sourceTree = "<group>"; };
 		908A7926281A5A4A00951B15 /* README-en.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "README-en.md"; sourceTree = "<group>"; };
 		908A7929281A5AE800951B15 /* Iconchanger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Iconchanger.png; sourceTree = "<group>"; };
 		90B57C1A286AA2B400EE52D3 /* URL+Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Document.swift"; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 			children = (
 				900D1CEA281934C7007ABB12 /* MainView.swift */,
 				900D1CF9281938D6007ABB12 /* AppListView.swift */,
-				908A79082819840D00951B15 /* AppChangeIconView.swift */,
+				908A79082819840D00951B15 /* AppIconChangeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -272,7 +272,7 @@
 				900D1CFA281938D6007ABB12 /* AppListView.swift in Sources */,
 				908A79022819753E00951B15 /* String+RangeSubscript.swift in Sources */,
 				900D1CF8281936C7007ABB12 /* FullDiskPermision.swift in Sources */,
-				908A79092819840D00951B15 /* AppChangeIconView.swift in Sources */,
+				908A79092819840D00951B15 /* AppIconChangeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

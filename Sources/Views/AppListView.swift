@@ -32,7 +32,7 @@ struct AppListView: View {
         }
         // 当 selectedApp 不为空时，显示 AppChangeIconView
         .sheet(item: $selectedApp) {
-            AppChangeIconView(app: $0)
+            AppIconChangeView(app: $0)
                 .onDisappear {
                     selectedApp = nil
                 }

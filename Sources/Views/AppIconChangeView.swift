@@ -8,7 +8,7 @@
 import SwiftUI
 import LaunchPadManagerDBHelper
 
-struct AppChangeIconView: View {
+struct AppIconChangeView: View {
 
     // 定义网格布局的列配置，使用自适应布局，最小宽度为 60，顶部对齐
     let gridColumns = [GridItem(.adaptive(minimum: 60), alignment: .top)]
