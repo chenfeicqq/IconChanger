@@ -12,10 +12,8 @@
 "1. Open the System Setting App" = "1. 打开“系统设置”应用";
 "2. Go to the security" = "2. 隐私与安全性";
 "3. Choose the Full Disk Access" = "3. 完全磁盘访问权限";
-"4. Unlock it" = "4. Unlock it";
-"5. Choose or add the IconChanger" = "5. Choose or add the IconChanger";
-"6. Check the check box" = "6. Check the check box";
-"Check the Access Permition" = "Check the Access Permition";
+"4. Turn on the IconChanger switch" = "4. 打开 IconChanger 权限开关";
+"Check the Access Permition" = "检查访问权限";
 "Show in the Finder" = "在“访达”中显示";
 "Cancel" = "取消";
 "Choose from the Local" = "选取本地图标";
